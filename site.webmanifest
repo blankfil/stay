@@ -1,0 +1,17 @@
+{
+  "name": "StayMatch Kenya",
+  "short_name": "StayMatch",
+  "description": "Verified BnB and Airbnb-style stays across Kenya.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf8f2",
+  "theme_color": "#1a1208",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
