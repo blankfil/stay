@@ -128,7 +128,7 @@ const observer = new IntersectionObserver(
 
 document
   .querySelectorAll(
-    ".step, .stay-card, .blog-card, .faq-item, .value-item, .channel",
+    ".step, .stay-card, .blog-card, .faq-item, .value-item, .channel, .team-card",
   )
   .forEach((el) => {
     el.style.opacity = "0";
