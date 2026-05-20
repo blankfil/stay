@@ -73,12 +73,6 @@ function openWhatsAppInquiry() {
   window.location.href = `https://wa.me/${CONTACT.whatsappNumber}?text=${message}`;
 }
 
-function openEmailInquiry() {
-  const subject = encodeURIComponent("New StayMatch Inquiry");
-  const body = encodeURIComponent(buildInquiryMessage());
-  window.location.href = `mailto:${CONTACT.email}?subject=${subject}&body=${body}`;
-}
-
 document.querySelectorAll(".stay-fav").forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.textContent = btn.textContent === "\u2661" ? "\u2665" : "\u2661";
@@ -88,18 +82,10 @@ document.querySelectorAll(".stay-fav").forEach((btn) => {
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  submitBtn.textContent = "Opening email...";
+  submitBtn.textContent = "Sending...";
   submitBtn.disabled = true;
 
   const action = form.getAttribute("action") || "";
-
-  if (action.startsWith("mailto:")) {
-    openEmailInquiry();
-    successMsg.classList.add("show");
-    submitBtn.textContent = "Email draft opened";
-    submitBtn.disabled = false;
-    return;
-  }
 
   const data = new FormData(form);
 
